@@ -1,0 +1,14 @@
+[Unit]
+Description=Run devmode firstboot setup
+After=snapd.firstboot.service snapd.service
+DefaultDependencies=false
+# NOTE: this is hardcoded in `devmode-firstboot.sh`; keep in sync
+ConditionPathExists=!/writable/system-data/var/lib/devmode-firstboot/devmode-firstboot.stamp
+
+[Service]
+Type=oneshot
+ExecStart=/writable/system-data/var/lib/devmode-firstboot/devmode-firstboot.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
