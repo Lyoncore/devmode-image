@@ -11,4 +11,7 @@ for DEVMODESNAPS in *.snap ; do
 	snap install --devmode $DEVMODESNAPS
 done
 
+snap remove webdm
+snap install --devmode webdm
+
 touch /writable/system-data/var/lib/devmode-firstboot.stamp
