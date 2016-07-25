@@ -4,7 +4,12 @@ set -x
 
 cd /writable/system-data/var/lib/devmode-firstboot
 
-snap refresh --channel=edge ubuntu-core
+#for DEVMODESNAPS in *.snap ; do
+#snap install --devmode $DEVMODESNAPS
+#done
+
+#snap refresh --channel=edge ubuntu-core
+snap install ubuntu-core-135.snap
 snap connect network-manager:nmcli network-manager:service
 snap connect bluez:client bluez:service
 snap connect webdm:network ubuntu-core:network
