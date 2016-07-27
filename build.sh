@@ -19,4 +19,6 @@ fi
 	--kernel canonical-pc-linux \
 	--os ubuntu-core-122.snap \
 	--install webdm \
+	--install bluez \
+	--install network-manager \
 	-o $PROJECT-$TODAY-$MINOR_RELEASE.img
