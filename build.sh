@@ -18,5 +18,5 @@ fi
 	--gadget canonical-pc \
 	--kernel canonical-pc-linux \
 	--os ubuntu-core \
-    --install webdm \
+	--install webdm \
 	-o $PROJECT-$TODAY-$MINOR_RELEASE.img
