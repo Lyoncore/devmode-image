@@ -15,8 +15,8 @@ fi
 	--channel $CHANNEL \
 	--size 4 \
 	--enable-ssh \
-	--gadget canonical-pc \
+	--gadget demo-amd64 \
 	--kernel canonical-pc-linux \
-	--os ubuntu-core \
+	--os ubuntu-core-122.snap \
 	--install webdm \
 	-o $PROJECT-$TODAY-$MINOR_RELEASE.img

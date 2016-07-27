@@ -1,5 +1,6 @@
 [Unit]
 Description=Run devmode firstboot setup
+Before=snapd.boot-ok.service
 After=snapd.firstboot.service snapd.service
 DefaultDependencies=false
 # NOTE: this is hardcoded in `devmode-firstboot.sh`; keep in sync
