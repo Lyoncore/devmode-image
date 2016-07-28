@@ -1,8 +1,8 @@
 # devmode-image
 <pre>
 
-./build.sh
-sudo ./hack-udf.sh havasu.img
+./build.sh 0 havasu edge
+sudo ./hack-udf.sh havasu-0.img
 
 This will give you an Ubuntu core 16 image with nm,bluez,webdm in devmode.
 
