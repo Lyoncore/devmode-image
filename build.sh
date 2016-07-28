@@ -21,5 +21,4 @@ fi
 	--install webdm \
 	--install bluez \
 	--install network-manager \
-	--install tpm \
 	-o $PROJECT-$TODAY-$MINOR_RELEASE.img
