@@ -11,14 +11,15 @@ if [ -z $CHANNEL ] ; then
 	CHANNEL=edge
 fi
 
-./ubuntu-device-flash --verbose core 16 \
+/snap/bin/ubuntu-device-flash --verbose core 16 \
 	--channel $CHANNEL \
 	--size 4 \
 	--enable-ssh \
-	--gadget demo-amd64 \
-	--kernel canonical-pc-linux \
-	--os ubuntu-core-122.snap \
-	--install webdm \
+	--gadget pc \
+	--kernel pc-kernel \
+	--os ubuntu-core \
+	--install snapweb \
 	--install bluez \
 	--install network-manager \
+	--install modem-manager \
 	-o $PROJECT-$TODAY-$MINOR_RELEASE.img

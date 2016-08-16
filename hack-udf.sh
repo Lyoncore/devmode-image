@@ -53,4 +53,3 @@ mount /dev/$IMAGE_LOOP $TMPDIR/image/writable
 cp -r devmode-firstboot $TMPDIR/image/writable/system-data/var/lib/
 cp -f devmode-firstboot/devmode-firstboot.service $TMPDIR/image/writable/system-data/etc/systemd/system/
 ln -s /lib/systemd/system/devmode-firstboot.service $TMPDIR/image/writable/system-data/etc/systemd/system/multi-user.target.wants/devmode-firstboot.service
-
