@@ -11,7 +11,7 @@ if [ -z $CHANNEL ] ; then
 	CHANNEL=edge
 fi
 
-/snap/bin/ubuntu-device-flash --verbose core 16 \
+./ubuntu-device-flash --verbose core 16 \
 	--channel $CHANNEL \
 	--size 4 \
 	--enable-ssh \
