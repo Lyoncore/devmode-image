@@ -8,7 +8,7 @@ cd /writable/system-data/var/lib/devmode-firstboot
 #	snap install --devmode $DEVMODESNAPS
 #done
 
-snap install tpm_1.2-1_amd64.snap
+snap install --devmode tpm_1.2-1_amd64.snap
 snap install --devmode uefi-fw-tools_1.0-0.7.2+git_amd64.snap
 
 snap connect modem-manager:mmcli modem-manager:service
@@ -25,7 +25,7 @@ systemctl restart snap.modem-manager.modemmanager
 systemctl restart snap.bluez.bluez
 systemctl restart snap.bluez.obex
 
-sed -i 's/After=snapd.frameworks.target/After=network-online.target snapd.frameworks.target/g' /etc/systemd/system/snap.snapweb.snapweb.service
-sed -i 's/Requires=snapd.frameworks.target/Requires=network-online.target snapd.frameworks.target/g' /etc/systemd/system/snap.snapweb.snapweb.service
+sed -i 's/After=snapd.frameworks.target/After=network-online.target snapd.frameworks.target snap.network-manager.networkmanager.service/g' /etc/systemd/system/snap.snapweb.snapweb.service
+sed -i 's/Requires=snapd.frameworks.target/Requires=network-online.target snapd.frameworks.target snap.network-manager.networkmanager.service/g' /etc/systemd/system/snap.snapweb.snapweb.service
 
 reboot
